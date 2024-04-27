@@ -16,7 +16,10 @@ export class User extends Model {
   id: string;
 
   @Column({ allowNull: false })
-  name: string;
+  firstName: string;
+
+  @Column({ allowNull: false })
+  lastName: string;
 
   @Unique
   @Column({ allowNull: false })

@@ -1,10 +1,13 @@
 export default () => ({
   port: parseInt(process.env.PORT, 10) || 8080,
   database: {
-    host: process.env.DATABASE_HOST,
-    port: parseInt(process.env.DATABASE_PORT, 10) || 5432,
-    username: 'root',
-    password: 'password',
-    database: 'e-comm-dev',
+    host: process.env.POSTGRES_HOST,
+    port: parseInt(process.env.POSTGRES_PORT, 10) || 5432,
+    username: process.env.POSTGRES_USER,
+    password: process.env.POSTGRES_PASSWORD,
+    database: process.env.POSTGRES_DB,
+  },
+  jwt: {
+    secret: process.env.JWT_SECRET,
   },
 });
