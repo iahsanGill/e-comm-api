@@ -9,7 +9,7 @@ import {
   Default,
   PrimaryKey,
 } from 'sequelize-typescript';
-import { Product } from 'src/products/products.model';
+import { Product } from 'src/products/model/products.model';
 import { User } from 'src/user/user.model';
 
 @Table({ timestamps: true })
